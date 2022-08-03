@@ -22,10 +22,12 @@ $router->group(['prefix' => 'api/v1'], function() use($router){
     $router->get('/reports/list', ['uses' => 'ReportController@index']);
     $router->get('/reports/list/{id}', ['uses' => 'ReportController@show']);
 
-    $router->post('/reports', ['uses' => 'ReportController@create']);
-    $router->delete('reports/{id}', ['uses' => 'ReportController@delete']);
-    $router->put('reports/{id}', ['uses' => 'ReportController@update']);
-
+    /*
+        $router->post('/reports', ['uses' => 'ReportController@create']);
+        $router->delete('reports/{id}', ['uses' => 'ReportController@delete']);
+        $router->put('reports/{id}', ['uses' => 'ReportController@update']);
+    */
+    
     /*
         Recurso: Materias (Report)
         Endpoint: /api/v1/reports/list (cursos)

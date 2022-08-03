@@ -32,8 +32,9 @@ class ReportController extends Controller
     }
 
 
+    /*
     //new
-
+    
     public function create(Request $request)
     {
         $report = $this->report->create($request->all());
@@ -54,4 +55,6 @@ class ReportController extends Controller
         $this->report->findOrFail($id)->delete();
         return response('Deleted Successfully', 200);
     }
+    
+    */
 }

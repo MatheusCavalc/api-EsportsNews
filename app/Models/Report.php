@@ -19,7 +19,7 @@ class Report extends Model implements AuthenticatableContract, AuthorizableContr
      * @var string[]
      */
     protected $fillable = [
-        'name', 'email',
+        'title', 'description', 'report', 'city', 'authors', 'tags', 'image', 'date', 'user_id', 'game',
     ];
 
     /**

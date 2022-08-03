@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Report;
+use Illuminate\Http\Request;
 
 class ReportController extends Controller
 {
@@ -28,5 +29,29 @@ class ReportController extends Controller
 
         return $this->report->find($id);
 
+    }
+
+
+    //new
+
+    public function create(Request $request)
+    {
+        $report = $this->report->create($request->all());
+
+        return response()->json($report, 201);
+    }
+
+    public function update($id, Request $request)
+    {
+        $report = $this->report->findOrFail($id);
+        $report->update($request->all());
+
+        return response()->json($report, 200);
+    }
+
+    public function delete($id)
+    {
+        $this->report->findOrFail($id)->delete();
+        return response('Deleted Successfully', 200);
     }
 }
